@@ -34,37 +34,12 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         // task 3
-        int year = 2022;
-        int every4;
-        int every100;
-        int every400;
-        every4 = year % 4;
-        every100 = year % 100;
-        every400 = year % 400;
-        boolean isEvery4EqualZeroTrue = every4 == 0;
-        boolean isEvery4EqualZeroFalse = every4 !=0;
-        boolean isEvery100EqualZeroTrue = every100 == 0;
-        boolean isEvery100EqualZeroFalse = every100 != 0;
-        boolean isEvery400EqualZeroTrue = every400 == 0;
-        boolean isEvery400EqualZeroFalse = every400 != 0;
-        boolean yearLess100 = year < 100;
-        boolean yearMore100 = year >= 100;
-        if (isEvery4EqualZeroFalse) {
-            System.out.println(year + " год не является високосным");
+        int year = 2021;
+        if ((year % 4 == 0) && ((year % 100 != 0) || year % 400 == 0)) { System.out.println(year + " - високосный год.");
+        } else
+        { System.out.println(year + " - не является високосным годом.");
         }
-        if (isEvery4EqualZeroTrue && yearLess100) {
-            System.out.println(year + " год является високосным");
-        }
-        if (isEvery4EqualZeroTrue && yearMore100 && isEvery100EqualZeroFalse) {
-            System.out.println(year + " год является високосным");
-        }
-        if (isEvery100EqualZeroTrue && yearMore100 && isEvery400EqualZeroFalse) {
-            System.out.println(year + " год не является високосным");
-        }
-        if (isEvery400EqualZeroTrue && yearMore100) {
-            System.out.println(year + " год является високосным");
-        }
-        //task 4
+    //task 4
         int deliveryDistance = 95;
         float deliveryDays;
         if (deliveryDistance < 20) {
